@@ -1,4 +1,4 @@
-package com.dmdev.spring;
+package dev.mirrex.spring;
 
 import dev.mirrex.spring.database.pool.ConnectionPool;
 import dev.mirrex.spring.database.repository.CrudRepository;
@@ -16,7 +16,7 @@ public class ApplicationRunner {
         System.out.println(Serializable.class.isAssignableFrom(value.getClass()));
 
         try (var context = new ClassPathXmlApplicationContext("application.xml")) {
-            //      clazz -> String -> Map<String, Object>
+    //      clazz -> String -> Map<String, Object>
             var connectionPool = context.getBean("pool1", ConnectionPool.class);
             System.out.println(connectionPool);
 
