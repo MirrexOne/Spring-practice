@@ -15,16 +15,16 @@
                             use-default-filters="false">
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Component"/>
         <context:include-filter type="assignable" expression="dev.mirrex.spring.database.repository.CrudRepository"/>
-        <context:include-filter type="regex" expression="com\..+Repository"/>
+        <context:include-filter type="regex" expression="dev\..+Repository"/>
     </context:component-scan>
 
-    <context:property-placeholder location="classpath:application.properties"/>
+<!--    <context:property-placeholder location="classpath:application.properties"/>-->
 
-    <!--    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>-->
+<!--        <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>-->
 
-    <!--        <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">-->
-    <!--            <property name="locations" value="classpath:application.properties"/>-->
-    <!--        </bean>-->
+<!--            <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">-->
+<!--                <property name="locations" value="classpath:application.properties"/>-->
+<!--            </bean>-->
 
     <!--    <constructor-arg name="args" type="java.util.List">-->
     <!--        <list>-->
