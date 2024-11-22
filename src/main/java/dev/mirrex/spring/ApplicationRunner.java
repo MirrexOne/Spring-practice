@@ -3,6 +3,7 @@ package dev.mirrex.spring;
 import dev.mirrex.spring.config.ApplicationConfiguration;
 import dev.mirrex.spring.database.pool.ConnectionPool;
 import dev.mirrex.spring.database.repository.CrudRepository;
+import dev.mirrex.spring.service.CompanyService;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -25,8 +26,8 @@ public class ApplicationRunner {
             var connectionPool = context.getBean("pool1", ConnectionPool.class);
             System.out.println(connectionPool);
 
-            var companyRepository = context.getBean("companyRepository", CrudRepository.class);
-            System.out.println(companyRepository.findById(1));
+            var companyService = context.getBean(CompanyService.class);
+            System.out.println(companyService.findById(1));
         }
     }
 }
